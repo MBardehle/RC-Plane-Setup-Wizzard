@@ -8,7 +8,7 @@ Die Daten werden dabei über Bluetooth an eine Android-App übertragen und angez
 ![Titelbild](https://user-images.githubusercontent.com/44746296/84024259-d822e280-a989-11ea-8f0d-6972fbe66a02.jpg)
 
 
-Schwerpunktmessung
+#Schwerpunktmessung
 ![Schwerpunktmessung 3](https://user-images.githubusercontent.com/44746296/84024550-613a1980-a98a-11ea-9b7e-f329de5b495d.png)
 
 
