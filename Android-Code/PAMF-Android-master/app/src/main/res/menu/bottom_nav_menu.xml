@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_cog"
+        android:icon="@drawable/ic_cog"
+        android:title="@string/title_centergravity" />
+
+    <item
+        android:id="@+id/navigation_rudder"
+        android:icon="@drawable/ic_compare_black_24dp"
+        android:title="@string/title_rudder" />
+
+    <item
+        android:id="@+id/navigation_ewd"
+        android:icon="@drawable/ic_vertical_align_center_black_24dp"
+        android:title="@string/title_ewd" />
+
+    <item
+        android:id="@+id/navigation_calibrate"
+        android:icon="@drawable/ic_perm_data_setting_black_24dp"
+        android:title="@string/title_calibrate" />
+</menu>

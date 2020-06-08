@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_cog">
+
+    <fragment
+        android:id="@+id/navigation_cog"
+        android:name="de.abg.pamf.ui.centergravity.CenterGravityFragment"
+        android:label="@string/title_centergravity"
+        tools:layout="@layout/fragment_cog" >
+        <action
+            android:id="@+id/action_navigation_cog_to_navigation_cog_settings"
+            app:destination="@id/navigation_cog_settings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cog_settings"
+        android:name="de.abg.pamf.ui.centergravity.CogSettingsFragment"
+        android:label="@string/title_cog_settings"
+        tools:layout="@layout/fragment_cog_settings" />
+
+    <fragment
+        android:id="@+id/navigation_rudder"
+        android:name="de.abg.pamf.ui.rudder.RudderFragment"
+        android:label="@string/title_rudder" >
+        <action
+            android:id="@+id/action_navigation_rudder_to_navigation_rud_settings"
+            app:destination="@id/navigation_rud_settings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_rud_settings"
+        android:name="de.abg.pamf.ui.rudder.RudderSettingsFragment"
+        android:label="@string/title_rudder_settings"
+        tools:layout="@layout/fragment_rudder_settings" />
+    <fragment
+        android:id="@+id/navigation_ewd"
+        android:name="de.abg.pamf.ui.ewd.EwdFragment"
+        android:label="@string/title_ewd" />
+
+    <fragment
+        android:id="@+id/navigation_calibrate"
+        android:name="de.abg.pamf.ui.calibrate.CalibrateFragment"
+        android:label="@string/title_calibrate" >
+        <action
+            android:id="@+id/action_navigation_calibrate_to_navigation_calibrate_scale"
+            app:destination="@id/navigation_calibrate_scale" />
+        <action
+            android:id="@+id/action_navigation_calibrate_to_navigation_calibrate_tilt"
+            app:destination="@id/navigation_calibrate_tilt" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_calibrate_scale"
+        android:name="de.abg.pamf.ui.calibrate.CalibrateScaleFragment"
+        android:label="@string/title_calibrate_scale" />
+    <fragment
+        android:id="@+id/navigation_calibrate_tilt"
+        android:name="de.abg.pamf.ui.calibrate.CalibrateTiltSensorFragment"
+        android:label="@string/title_calibrate_tilt" />
+</navigation>

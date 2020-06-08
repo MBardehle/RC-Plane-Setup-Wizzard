@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/cog_ll_calculated"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_box_green"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/GreenBoxValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cog_cog_front_static"
+                    app:layout_flexGrow="1" />
+
+                <TextView
+                    android:id="@+id/cog_tv_cog_front"
+                    style="@style/GreenBoxValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="5"
+                    android:singleLine="true"
+                    android:text="0mm"
+                    android:textAlignment="textEnd"
+                    app:layout_flexGrow="1"/>
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"
+                app:alignItems="stretch"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_box_green"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/GreenBoxValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cog_cog_diff_static"
+                    app:layout_flexGrow="100"/>
+
+                <TextView
+                    android:id="@+id/cog_tv_diff"
+                    style="@style/GreenBoxValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:text="0mm " />
+
+                <TextView
+                    android:id="@+id/cog_tv_diff_text"
+                    style="@style/GreenBoxValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cog_cog_diff_text_right"
+                    app:layout_flexGrow="1"
+                    android:textAlignment="textEnd"/>
+            </com.google.android.flexbox.FlexboxLayout>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/cog_iv_type"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintDimensionRatio="12:5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cog_ll_calculated"
+            app:srcCompat="@drawable/img_cg_spornfahrwerk_2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="136dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cog_iv_type">
+
+            <LinearLayout
+                style="@style/Box"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ValueMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Waage 1" />
+
+                <TextView
+                    android:id="@+id/cog_tv_weight1"
+                    style="@style/ValueMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="800 gr" />
+
+                <Spinner
+                    android:id="@+id/cog_sp_scale1"
+                    style="@style/MySpinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/cog_spinner_values" />
+
+                <TextView
+                    android:id="@+id/cog_tv_tara_1"
+                    style="@style/GreenButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rudder_tara" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Box"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ValueMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Waage 2" />
+
+                <TextView
+                    android:id="@+id/cog_tv_weight2"
+                    style="@style/ValueMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="800 gr" />
+
+                <Spinner
+                    android:id="@+id/cog_sp_scale2"
+                    style="@style/MySpinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:entries="@array/cog_spinner_values" />
+                <TextView
+                    android:id="@+id/cog_tv_tara_2"
+                    style="@style/GreenButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rudder_tara" />
+                <!--                    android:background="@drawable/bg_box" -->
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Box"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ValueMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Waage 3" />
+
+                <TextView
+                    android:id="@+id/cog_tv_weight3"
+                    style="@style/ValueMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="800 gr"
+
+                    />
+
+                <Spinner
+                    android:id="@+id/cog_sp_scale3"
+                    style="@style/MySpinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:entries="@array/cog_spinner_values"
+                    />
+                <TextView
+                    android:id="@+id/cog_tv_tara_3"
+                    style="@style/GreenButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rudder_tara" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            >
+        <TextView
+            android:id="@+id/cog_tv_weight_sum"
+            style="@style/Box"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Gesamt: 3.200gt."
+            android:textAlignment="center"
+            android:padding="10dp"
+            />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.calibrate.CalibrateTiltSensorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/cal_tilt_select_sensor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/cal_tilt_rg_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+            <RadioButton
+                android:id="@+id/cal_tilt_rb_unit_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cal_tilt_unit1" />
+
+            <RadioButton
+                android:id="@+id/cal_tilt_rb_unit_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cal_tilt_unit2" />
+
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/cal_tilt_ll_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cal_tilt_rg_unit">
+
+            <TextView
+                android:id="@+id/cal_tilt_tv_steptext"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/cal_tilt_step1" />
+
+            <Button
+                android:id="@+id/cal_tilt_btn_next_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cal_tilt_nextStep" />
+
+            <ImageView
+                android:id="@+id/cal_tilt_img_stepimg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_sensor_step1" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cal_tilt_ll_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cal_tilt_ll_steps"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lade..." />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

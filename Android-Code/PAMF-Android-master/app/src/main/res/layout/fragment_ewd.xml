@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ValueMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ewd_a"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/ewd_tv_angle_a"
+                    style="@style/ValueXLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="0,0°" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ewd_tv_tara_a"
+                style="@style/GreenButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textSize="20dp"
+                android:text="@string/ewd_tara" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/bg_box_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/GreenBoxValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ewd"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/ewd_tv_angle_diff"
+                style="@style/GreenBoxValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/angle_default"
+                android:textAlignment="center"
+                android:textSize="32dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ValueMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ewd_b"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/ewd_tv_angle_b"
+                    style="@style/ValueXLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/angle_default" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ewd_tv_tara_b"
+                style="@style/GreenButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textSize="20dp"
+                android:text="@string/ewd_tara" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintDimensionRatio="4:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/img_ewd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

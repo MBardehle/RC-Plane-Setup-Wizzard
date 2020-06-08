@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="cellBorder">#a0a0ff</color>
+    <color name="greenBackground">#9fd85f</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#ffcc0000</color>
+    <color name="red_diff">#ffff0000</color>
+    <color name="ltgrey">#ffcccccc</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="green">#ff00ff00</color>
+</resources>

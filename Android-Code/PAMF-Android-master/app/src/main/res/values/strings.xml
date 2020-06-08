@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">(RC) Plane Setup Wizzard</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- Navigation -->
+    <string name="title_centergravity">Schwerpunkt</string>
+    <string name="title_cog_settings">Schwerpunkt Einstellungen</string>
+    <string name="title_rudder">Ruderausschläge</string>
+    <string name="title_rudder_settings">Ruder Einstellungen</string>
+    <string name="title_ewd">EWD</string>
+    <string name="title_calibrate">Kalibrieren</string>
+    <string name="title_calibrate_scale">Waagen kalibrieren</string>
+    <string name="title_calibrate_tilt">Neigungssensor kalibrieren</string>
+    <string name="title_safe">Speichern</string>
+
+    <!-- COG -->
+    <string name="cog_cog_front_static">Schwerpunkt ab Nasenleiste: \t\t</string>
+    <string name="cog_cog_front">\u00A0%1$dmm </string>
+    <string name="cog_cog_diff_static"> Abweichung: \t\t</string>
+    <string name="cog_cog_diff">\u00A0%1$dmm\u00A0</string>
+    <string name="cog_cog_diff_text_front"> zu weit vorne</string>
+    <string name="cog_cog_diff_text_back"> zu weit hinten</string>
+    <string name="cog_cog_diff_text_right"> wie vorgegeben</string>
+
+    <!-- COG Settings -->
+    <string name="cog_s_type_1">Spornfahrwerk</string>
+    <string name="cog_s_type_2">Bugfahrwerk</string>
+    <string name="cog_s_scalesdistance">Abstand zwischen vorderen und hinteren Waagen</string>
+    <string name="cog_s_scale1_height">Anhebung Waage 1</string>
+    <string name="cog_s_distancefront_1">Abstand Waage 2 und 3 zur Nasenleiste </string>
+    <string name="cog_s_distancefront_2">Abstand Waage 1 und Nasenleiste </string>
+    <string name="cog_s_distancetarget">Schwerpunktvorgabe ab Nasenleiste </string>
+    <string-array name="cog_spinner_values">
+        <item>1 Kg</item>
+        <item>5 Kg</item>
+        <item>10 Kg</item>
+    </string-array>
+
+    <!-- Ruderausschlag -->
+    <string name="rudder_type_1">Gleichlauf</string>
+    <string name="rudder_type_2">Gegenlauf</string>
+
+    <string name="rudder_sensor_a">Sensor A</string>
+    <string name="rudder_sensor_diff">Diff</string>
+    <string name="rudder_sensor_b">Sensor B</string>
+    <string name="rudder_angle">Winkel</string>
+    <string name="rudder_rudderway">Ruderweg</string>
+    <string name="rudder_tara">Tara</string>
+    <string name="rudder_record">Record Start</string>
+    <string name="rudder_record_stop">Record Stop</string>
+    <string name="angle">%1$.1f°</string>
+    <string name="angle2">%1$.1f&lt;small>°&lt;/small></string>
+    <string name="angle_default">0.0°</string>
+    <string name="mm">%1$d&lt;small>mm&lt;/small></string>
+    <string name="mm_default">0mm</string>
+
+    <string name="rudder_s_time">Record-Zeit</string>
+    <string name="rudder_s_start">Start</string>
+
+    <!-- Ruderausschlag Einstellungen-->
+    <string name="rudder_s_maxdiff">Maximale Winkelabweichung (in Grad)</string>
+    <string name="rudder_s_width">Breite der Ruderfläche (in mm)</string>
+
+
+    <!-- EWD -->
+    <string name="ewd_a">EWD A</string>
+    <string name="ewd_b">EWD B</string>
+    <string name="ewd">EWD</string>
+    <string name="ewd_tara">Tara</string>
+
+
+    <!-- Kalibrieren -->
+    <string name="cal_cal_scale">Waagen kalibrieren</string>
+    <string name="cal_cal_tilt">Neigungssensor kalibrieren</string>
+    <!-- Waage Kalibrieren -->
+    <string name="cal_scale_select_scale">Waage auswählen</string>
+    <string name="cal_scale_unit1">Waage 1</string>
+    <string name="cal_scale_unit2">Waage 2</string>
+    <string name="cal_scale_unit3">Waage 3</string>
+    <string name="cal_scale_select_scale2">Messbereich auswählen</string>
+    <string name="cal_scale_scale1000">1 Kg</string>
+    <string name="cal_scale_scale5000">5 Kg</string>
+    <string name="cal_scale_scale10000">10 Kg</string>
+    <string name="cal_scale_enter_weight">Kalibriergewicht eintragen</string>
+    <string name="cal_scale_step1">Alle Gewichte von der Waage entfernen</string>
+    <string name="cal_scale_step2">Kalibriergewicht auflegen</string>
+    <string name="cal_scale_step3">Die Kalibrierung ist abgeschlossen</string>
+    <string name="cal_scale_next">Weiter</string>
+    <string name="cal_scale_finish">Beenden</string>
+    <string name="cal_scale_toast_error">Bitte ein Gewicht größer als 0 eingeben</string>
+    <string name="cal_scale_weight">Gemessenes Gewicht</string>
+    <string name="cal_scale_weight_value">%1$.1f Gramm</string>
+    <!--    <string name="cal_scale_weight_value">%1$.1f Gramm</string>-->
+    <string name="cal_scale_factor">Errechnetere Kalibrierfaktor</string>
+    <string name="cal_scale_factor_value">%1$.2f</string>
+    <string name="cal_scale_fine_adjustment">Feinjustierung Kalibrierfaktor</string>
+    <string name="cal_scale_fine_adjustment_m100">-100</string>
+    <string name="cal_scale_fine_adjustment_m10">-10</string>
+    <string name="cal_scale_fine_adjustment_p10">+10</string>
+    <string name="cal_scale_fine_adjustment_p100">+100</string>
+
+    <!-- Neigungssensor kalibrieren -->
+    <string name="cal_tilt_select_sensor">Sensor auswählen</string>
+    <string name="cal_tilt_unit1">Sensor A</string>
+    <string name="cal_tilt_unit2">Sensor B</string>
+    <string name="cal_tilt_nextStep">Nächster Schritt</string>
+    <string name="cal_tilt_step1">Anweisung: Sensor mit der Unterseite flach auf eine ebene Fläche legen</string>
+    <string name="cal_tilt_step2">Anweisung: Sensor in einem 90° Winkel auf die linke Seite drehen</string>
+    <string name="cal_tilt_step3">Anweisung: Sensor mit der Oberseite flach auf eine ebene Fläche legen</string>
+    <string name="cal_tilt_step4">Anweisung: Sensor in einem 90° Winkel auf die rechte Seite drehen</string>
+    <string name="cal_tilt_step5">Anweisung: Sensor in einem 90° Winkel auf die Vorderseite drehen</string>
+    <string name="cal_tilt_step6">Anweisung: Sensor in einem 90° Winkel auf die Rückseite drehen</string>
+    <string name="cal_tilt_step7">Anweisung: Sensor erneut mit der Unterseite flach auf eine ebene Fläche legen</string>
+    <string name="cal_tilt_step8">Die Kalibrierung ist abgeschlossen</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
