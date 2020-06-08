@@ -1,9 +1,12 @@
 # RC-Plane-Setup-Wizzard
+[![paypal](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YCZK2H3DCM73W)
+
+
 Der RC Plane Setup Wizzard kann für die Einstellung der Einstellwinkeldifferenz (EWD), Ruderwinkel und Schwerpunktmessung bei Modellflugzeugen benutzt werden. 
 
-Die benötigte Hardware besteht aus einem ESP32-Microcontroller , 3 Waagen und 2 Beschleunigungssensoren (MMA8451). 
+Die benötigte Hardware besteht aus einem ESP32-Microcontroller , 3 Waagen und 2 Beschleunigungssensoren (MMA8451). Das Gehäuse ist für eine selbst erstellte Platine konstruiert worden. Diese kann gegen eine kleine Gebühr bei mir erworben werden. 
 
-Die Daten werden dabei über Bluetooth an eine Android-App übertragen und angezeigt.
+Die Sensordaten werden kabellos über eine Bluetooth-Verbindung an eine Android-App übermittelt und angezeigt.
 
 
 ![Titelbild](https://user-images.githubusercontent.com/44746296/84024259-d822e280-a989-11ea-8f0d-6972fbe66a02.jpg)
