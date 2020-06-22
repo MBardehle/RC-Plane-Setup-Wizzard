@@ -28,7 +28,7 @@ object EwdData {
                 angles.postValue(floatArrayOf(a.toFloat(),b.toFloat(),c.toFloat()))
                 return true
             }),
-            timeout = 5000,
+            timeout = 2000,
             timeoutFunction = fun() {
                 message.onDefaultTimeout()
                 //Abbruch, weil zwischendurch eine andere Nachricht gesendet wurde?

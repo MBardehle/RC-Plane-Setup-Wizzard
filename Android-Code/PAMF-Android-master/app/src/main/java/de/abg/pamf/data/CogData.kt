@@ -52,10 +52,16 @@ object CogData {
             if(it[0] == 0 || it[1] == 0 || it[2] == 0 || distance_1_2_real == 0f)
                 center_of_gravity.value = 0
             else
-                if(type == 1)               //type 2 = Bugfahrwerk Waage 1 = vorne
-                    center_of_gravity.value = (((it[0] * distance_1_2_real) / (it[0] + it[1] + it[2])) - distance_front).roundToInt()
+/*                if(type == 2)               //type 2 = Bugfahrwerk Waage 1 = vorne
+                   center_of_gravity.value = (((it[0] * distance_1_2_real) / (it[0] + it[1] + it[2])) - distance_front).roundToInt()
                 else                        //type 1 = Heckfahrwerk Waage 1 (it[0]) = hinten
-                    center_of_gravity.value = ((((it[1] + it[2]) * distance_1_2_real) / (it[0] + it[1] + it[2])) - (distance_1_2_real - distance_front)).roundToInt()
+                    center_of_gravity.value = ((((it[1] + it[2]) * distance_1_2_real) / (it[0] + it[1] + it[2])) - distance_front).roundToInt()
+*/
+
+            if(type == 1)               //type 2 = Bugfahrwerk Waage 1 = vorne
+                center_of_gravity.value = (((it[0] * distance_1_2_real) / (it[0] + it[1] + it[2])) - distance_front).roundToInt()
+            else                        //type 1 = Heckfahrwerk Waage 1 (it[0]) = hinten
+                center_of_gravity.value = ((((it[1] + it[2]) * distance_1_2_real) / (it[0] + it[1] + it[2])) - (distance_1_2_real - distance_front)).roundToInt()
         }
 
         center_of_gravity_diff.addSource(
@@ -160,42 +166,16 @@ object CogData {
             true,
             true,
             "CG#" + scale_no + "#SET#" + value,
-            Pair("CG#" + scale_no + "#SET#" + value + "#OK", fun(_) : Boolean  {
-                when (scale_no) {
-                    '1' -> scale_1_livedata.postValue(value * 1000)
-                    '2' -> scale_2_livedata.postValue(value * 1000)
-                    '3' -> scale_3_livedata.postValue(value * 1000)
-                }
-                return false })
+            Pair("CG#" + scale_no + "#SET#" + value + "#OK", fun(_) : Boolean  { return false })
         )
     }
 
     fun setZero(scale_no: Char){
-        // Nach einem ZERO werden Gewichte gesendet
-        lateinit var message : BluetoothMessage
-        message = BluetoothMessage(
-            false,
-            false,
-            "CG#"+scale_no+"#ZERO" /*,
-//            Pair("CG#"+scale_no+"#ZERO#OK", fun(_) : Boolean  {return false})
-            Pair("CG#1#(-?\\d+\\.?\\d*)#2#(-?\\d+\\.?\\d*)#3#(-?\\d+\\.?\\d*)", fun(response) : Boolean  {
-                val match = Regex("CG#1#(-?\\d+\\.?\\d*)#2#(-?\\d+\\.?\\d*)#3#(-?\\d+\\.?\\d*)").find(response)!!
-                val (a,b,c) = match.destructured
-                weight.postValue(intArrayOf(
-                    round(a.toFloat()).toInt(),
-                    round(b.toFloat()).toInt(),
-                    round(c.toFloat()).toInt()))
-                return true
-                }),
-            timeout = 3000,
-            timeoutFunction = fun() {
-                message.onDefaultTimeout()
-                //Abbruch, weil zwischendurch eine andere Nachricht gesendet wurde?
-                if(isRequestingWeights){
-                    isRequestingWeights = false
-                    requestWeights()
-                }
-            }*/
+        BluetoothMessage(
+            true,
+            true,
+            "CG#"+scale_no+"#ZERO",
+            Pair("CG#"+scale_no+"#ZERO#OK", fun(_) : Boolean  {return false})
         )
     }
 
@@ -213,7 +193,10 @@ object CogData {
             false,
             false,
             "CG#0#START",
-            Pair("CG#0#Start#OK", fun(response) : Boolean  {return true}),
+            Pair("CG#0#Start#OK", fun(response) : Boolean  {
+                Log.e(TAG, "Beginne mit der Messung der Gewichte")
+                return true
+            }),
             Pair("CG#1#(-?\\d+\\.?\\d*)#2#(-?\\d+\\.?\\d*)#3#(-?\\d+\\.?\\d*)", fun(response) : Boolean  {
                 val match = Regex("CG#1#(-?\\d+\\.?\\d*)#2#(-?\\d+\\.?\\d*)#3#(-?\\d+\\.?\\d*)").find(response)!!
                 val (a,b,c) = match.destructured
@@ -221,12 +204,11 @@ object CogData {
                     round(a.toFloat()).toInt(),
                     round(b.toFloat()).toInt(),
                     round(c.toFloat()).toInt()))
-//                Log.w(TAG, "Verarbeite Gewichte")
                 return true
             }),
             timeout = 3000,
             timeoutFunction = fun() {
-                Log.e(TAG, "Timeout Gewichte")
+                Log.e(TAG, "Tmeout Gewichte")
                 message.onDefaultTimeout()
                 //Abbruch, weil zwischendurch eine andere Nachricht gesendet wurde?
                 if(isRequestingWeights){
@@ -242,8 +224,8 @@ object CogData {
         BluetoothMessage(
             false,
             false,
-            "CG#0#END"/*,
-            Pair("CG#0#END#OK", fun(response) : Boolean  {return false})*/
+            "CG#0#END",
+            Pair("CG#0#END#OK", fun(response) : Boolean  {return false})
         )
     }
 

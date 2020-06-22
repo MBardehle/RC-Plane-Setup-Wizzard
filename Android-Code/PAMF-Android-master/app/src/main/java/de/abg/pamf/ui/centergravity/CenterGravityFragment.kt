@@ -45,8 +45,7 @@ class CenterGravityFragment : Fragment(), DataFragment {
                     2 -> 10000
                     else -> 1000
                 }
-                Log.w(TAG, "value: " + value + " livedata: " + CogData.scale_1_livedata.value)
-                if( value != CogData.scale_1_livedata.value)
+                if( CogData.scale_1 != CogData.scale_1_livedata.value)
                     CogData.scale_1 = value
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -64,7 +63,7 @@ class CenterGravityFragment : Fragment(), DataFragment {
                     2 -> 10000
                     else -> 1000
                 }
-                if( value != CogData.scale_2_livedata.value)
+                if( CogData.scale_2 != CogData.scale_2_livedata.value)
                     CogData.scale_2 = value
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -82,7 +81,7 @@ class CenterGravityFragment : Fragment(), DataFragment {
                     2 -> 10000
                     else -> 1000
                 }
-                if( value != CogData.scale_3_livedata.value)
+                if( CogData.scale_3 != CogData.scale_3_livedata.value)
                     CogData.scale_3 = value
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}

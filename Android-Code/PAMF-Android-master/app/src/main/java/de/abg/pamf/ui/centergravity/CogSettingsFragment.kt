@@ -63,11 +63,11 @@ class CogSettingsFragment : Fragment() {
         }
 
         m_tv_distance_front.setOnClickListener {
-            val infoFragment = InfoFragment.newInstance("Es ist der Abstand zwischen der vorderen Waagen-Achse und der Nasenleiste einzutragen.", null)
+            val infoFragment = InfoFragment.newInstance("Es ist der Abstand zwischen der vorderen Waagen-Achse und der Nase einzutragen.", null)
             infoFragment.show(fragmentManager, "fragment_alert")
         }
         root.findViewById<TextView>(R.id.cog_s_tv_distancetarget).setOnClickListener {
-            val infoFragment = InfoFragment.newInstance("Es ist die Distanz zwischen der Nasenleiste und dem Ziel-Schwerpunkt einzutragen.", null)
+            val infoFragment = InfoFragment.newInstance("Es ist die Distanz zwischen der Nase und dem Ziel-Schwerpunkt einzutragen.", null)
             infoFragment.show(fragmentManager, "fragment_alert")
         }
 
@@ -87,11 +87,11 @@ class CogSettingsFragment : Fragment() {
 
         // Unterschiedliche Texte und Bilder zeigen, je nachdem welches Fahrwerk ausgewählt ist
         if(CogData.type == 1) {
-//            m_tv_distance_front.setText(R.string.cog_s_distancefront_1)
+            m_tv_distance_front.setText(R.string.cog_s_distancefront_1)
             root.findViewById<ImageView>(R.id.cog_s_iv_type).setImageResource(R.drawable.img_cg_spornfahrwerk)
             m_rg_type.check(R.id.cog_s_rb_type_1)
         } else {
-//            m_tv_distance_front.setText(R.string.cog_s_distancefront_2)
+            m_tv_distance_front.setText(R.string.cog_s_distancefront_2)
             root.findViewById<ImageView>(R.id.cog_s_iv_type).setImageResource(R.drawable.img_cg_bugfahrwerk)
             m_rg_type.check(R.id.cog_s_rb_type_2)
         }

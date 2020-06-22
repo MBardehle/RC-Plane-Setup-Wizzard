@@ -104,8 +104,9 @@ class CalibrateTiltSensorFragment : Fragment(), DataFragment {
                     m_step_imgview.setImageResource(R.drawable.img_sensor_step6)
                 }
                 6 -> {
-                    m_step_textview.setText(R.string.cal_tilt_step7)
-                    m_step_imgview.setImageResource(R.drawable.img_sensor_step1)
+   //                 m_step_textview.setText(R.string.cal_tilt_step8)
+                    m_step_textview.setText("Kalibrierung erfolgreich beendet. Zum speichern erneut Button drücken.")
+                    m_step_imgview.setImageResource(R.drawable.img_sensor_step_ok)
                 }
             }
             m_step_container.visibility = View.VISIBLE
@@ -124,7 +125,8 @@ class CalibrateTiltSensorFragment : Fragment(), DataFragment {
             Log.e("TAG", "EWD : onCalibration Finished")
             loading(false)
             m_step_textview.setText(R.string.cal_tilt_step8)
-            m_step_imgview.setImageResource(R.drawable.img_sensor_step1)
+ //           m_step_imgview.setImageResource(R.drawable.img_sensor_step1)
+            m_step_imgview.setImageResource(R.drawable.img_sensor_step_ok)
 //            Toast.makeText(activity, R.string.cal_tilt_step8, Toast.LENGTH_LONG).show()
             m_current_step = 0
             m_step_container.visibility = View.VISIBLE
